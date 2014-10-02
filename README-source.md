@@ -20,9 +20,6 @@ instack-undercloud via source
          cd instack
          git clone https://github.com/agroup/instack-undercloud
          git clone https://git.openstack.org/openstack/tripleo-incubator
-         # Pull down a needed patch for x86_64 support since discovered nodes are registered as x86_64 in Ironic.
-         pushd tripleo-incubator && git fetch https://review.openstack.org/openstack/tripleo-incubator refs/changes/03/123803/2 && git cherry-pick FETCH_HEAD && popd
-
 
 1. Complete the initial setup.
 
@@ -57,8 +54,8 @@ step.
 1. Clone instack-undercloud, source instack-sourcerc, and run script to install the undercloud from
    source. The script will produce a lot of output on the sceen. It also logs to
    ~/.instack/install-undercloud.log. You should see `install-undercloud
-   Complete!` at the end of a successful run. 
-   
+   Complete!` at the end of a successful run.
+
         git clone https://github.com/agroup/instack-undercloud
         source instack-undercloud/instack-sourcerc
         instack-install-undercloud-source
